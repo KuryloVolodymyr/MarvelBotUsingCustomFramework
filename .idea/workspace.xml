@@ -1,7 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ff28c8a-98a7-4823-b1cc-2dc80db7b2bc" name="Default" comment="" />
+    <list default="true" id="2ff28c8a-98a7-4823-b1cc-2dc80db7b2bc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ApiCaller.java" afterPath="$PROJECT_DIR$/src/main/java/com/service/ApiCaller.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Application.java" afterPath="$PROJECT_DIR$/src/main/java/com/Application.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ChatUserImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/ChatUserImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Replies.java" afterPath="$PROJECT_DIR$/src/main/java/com/Replies.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/TemplateBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/service/TemplateBuilder.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/domain/ComicsRequestEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/domain/ComicsRequestEntity.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/Character.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/Character.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/CharacterResults.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/CharacterResults.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/CollectedIssues.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/CollectedIssues.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/Collections.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/Collections.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/Comics.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/Comics.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/ComicsData.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/ComicsData.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/ComicsDate.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/ComicsDate.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/ComicsResults.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/ComicsResults.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/ComicsSeries.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/ComicsSeries.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/Creator.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/Creator.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/Data.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/Data.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/EventItems.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/EventItems.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/Events.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/Events.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/Image.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/Image.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/Item/CharacterItem.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/Item/CharacterItem.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/Item/ComicsItem.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/Item/ComicsItem.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/Item/CreatorItem.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/Item/CreatorItem.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/Item/Items.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/Item/Items.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/Item/SeriesItems.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/Item/SeriesItems.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/MarvelCharacterResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/MarvelCharacterResponse.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/MarvelComicsResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/MarvelComicsResponse.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/Price.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/Price.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/Series.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/Series.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/Stories.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/Stories.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/StoryItem.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/StoryItem.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/TextObjects.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/TextObjects.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/Thumbnail.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/Thumbnail.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/Urls.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/Urls.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marvelDTO/Variants.java" afterPath="$PROJECT_DIR$/src/main/java/com/marvelModel/Variants.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/repository/HeroesRatingRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/repository/HeroesRatingRepository.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/service/UserService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/handlers/ChatHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/service/handlers/ChatHandler.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/handlers/IntentHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/service/handlers/IntentHandler.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ApiCaller.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Application.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ChatUserImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/ChatUserImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Replies.class" afterPath="$PROJECT_DIR$/target/classes/com/Replies.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/TemplateBuilder.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/domain/ComicsRequestEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/domain/ComicsRequestEntity.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/Character.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/CharacterResults.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/CollectedIssues.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/Collections.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/Comics.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/ComicsData.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/ComicsDate.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/ComicsResults.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/ComicsSeries.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/Creator.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/Data.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/EventItems.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/Events.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/Image.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/Item/CharacterItem.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/Item/ComicsItem.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/Item/CreatorItem.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/Item/Items.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/Item/SeriesItems.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/MarvelCharacterResponse.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/MarvelComicsResponse.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/Price.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/Series.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/Stories.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/StoryItem.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/TextObjects.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/Thumbnail.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/Urls.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/marvelDTO/Variants.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/repository/HeroesRatingRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/repository/HeroesRatingRepository.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/UserService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/handlers/ChatHandler.class" afterPath="$PROJECT_DIR$/target/classes/com/service/handlers/ChatHandler.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/handlers/IntentHandler.class" afterPath="" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,22 +95,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ChatHandler.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ChatHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/service/handlers/ChatHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="93" column="18" lean-forward="true" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
+            <state relative-caret-position="242">
+              <caret line="242" column="59" lean-forward="true" selection-start-line="242" selection-start-column="59" selection-end-line="242" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#handleComicsTextRequest#0;class#ChatHandler#0" expanded="false" />
-                <element signature="e#4544#4545#0" expanded="true" />
-                <element signature="e#4607#4608#0" expanded="true" />
+                <element signature="method#handleRecentComicsRequest#0;class#ChatHandler#0" expanded="false" />
                 <element signature="method#handleComicsPostback#0;class#ChatHandler#0" expanded="false" />
                 <element signature="method#handleRatingPostback#0;class#ChatHandler#0" expanded="false" />
                 <element signature="method#handleRating#0;class#ChatHandler#0" expanded="false" />
+                <element signature="method#handleHeroQuickReply#0;class#ChatHandler#0" expanded="false" />
                 <element signature="method#handleStart#0;class#ChatHandler#0" expanded="false" />
                 <element signature="method#handleSubscriptionToComics#0;class#ChatHandler#0" expanded="false" />
                 <element signature="method#handleUnsubscribeToComics#0;class#ChatHandler#0" expanded="false" />
+                <element signature="method#handleRecentComics#0;class#ChatHandler#0" expanded="false" />
+                <element signature="method#handleMoreComicsPostback#0;class#ChatHandler#0" expanded="false" />
                 <element signature="method#onAction#0;class#ChatHandler#0" expanded="false" />
                 <element signature="method#rateHero#0;class#ChatHandler#0" expanded="false" />
                 <element signature="method#checkIfSubscribed#0;class#ChatHandler#0" expanded="false" />
@@ -39,25 +123,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApiCaller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ApiCaller.java">
+      <file leaf-file-name="TemplateBuilder.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/service/TemplateBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="80" column="48" lean-forward="false" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="48" />
+            <state relative-caret-position="157">
+              <caret line="88" column="89" lean-forward="false" selection-start-line="88" selection-start-column="89" selection-end-line="88" selection-end-column="89" />
               <folding>
-                <element signature="method#callMarvelForCharacter#0;class#ApiCaller#0" expanded="false" />
-                <element signature="method#callMarvelForComics#0;class#ApiCaller#0" expanded="false" />
-                <element signature="method#createHash#0;class#ApiCaller#0" expanded="false" />
+                <element signature="method#createGenericTemplateForCharacter#0;class#TemplateBuilder#0" expanded="false" />
+                <element signature="method#checkIfSubscribed#0;class#TemplateBuilder#0" expanded="false" />
+                <element signature="method#createRatingQuickReply#0;class#TemplateBuilder#0" expanded="false" />
+                <element signature="method#buildGenericTemplateForComics#0;class#TemplateBuilder#0" expanded="false" />
+                <element signature="method#buildGenericTemplateForUserComics#0;class#TemplateBuilder#0" expanded="false" />
+                <element signature="method#iterateThroughCharacters#0;class#TemplateBuilder#0" expanded="false" />
+                <element signature="method#iterateThroughComics#0;class#TemplateBuilder#0" expanded="false" />
+                <element signature="method#iterateThroughUserComics#0;class#TemplateBuilder#0" expanded="false" />
+                <element signature="method#buildTopHeroesQuickReply#0;class#TemplateBuilder#0" expanded="false" />
+                <element signature="method#checkTopHeroesSize#0;class#TemplateBuilder#0" expanded="false" />
+                <element signature="method#getStandartTopHeroes#0;class#TemplateBuilder#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <file leaf-file-name="Replies.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/Replies.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="125" lean-forward="true" selection-start-line="17" selection-start-column="125" selection-end-line="17" selection-end-column="125" />
+            <state relative-caret-position="272">
+              <caret line="73" column="56" lean-forward="false" selection-start-line="73" selection-start-column="56" selection-end-line="73" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -77,11 +169,15 @@
     <findStrings>
       <find>Bot</find>
       <find>Bot.DTO.MarvelDTO</find>
+      <find>comic</find>
     </findStrings>
     <replaceStrings>
       <replace>com</replace>
       <replace>com.MarvelDTO</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -91,10 +187,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ElementBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/Container.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ChatUserImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/Java8FeaturesTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/TemplateCreator.java" />
@@ -121,9 +215,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/Domain/UserRequestEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/Domain/HeroesRatingEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/repository/UserRequestRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/repository/HeroesRatingRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/superTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/SuperTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/actionInterceptors/TextHandler.java" />
@@ -133,14 +225,19 @@
         <option value="$PROJECT_DIR$/src/main/java/com/domain/UserEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/domain/UserComicsRequestEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/repository/UserComicsRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/domain/ComicsRequestEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/TemplateBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/Replies.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/service/handlers/IntentHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/repository/ComicsRequestRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/service/handlers/ChatHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ChatUserImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/domain/ComicsRequestEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ApiCaller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/repository/HeroesRatingRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/TemplateBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/service/handlers/IntentHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/service/ApiCaller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/Replies.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/service/handlers/ChatHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/service/TemplateBuilder.java" />
       </list>
     </option>
   </component>
@@ -162,6 +259,7 @@
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -177,10 +275,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,7 +317,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BotFramework" type="b2602c69:ProjectViewProjectNode" />
@@ -231,6 +327,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="handlers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BotFramework" type="b2602c69:ProjectViewProjectNode" />
@@ -243,6 +340,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -400,19 +499,30 @@
       <workItem from="1524129778755" duration="5064000" />
       <workItem from="1524134963349" duration="16821000" />
       <workItem from="1524214193497" duration="25669000" />
-      <workItem from="1524466997096" duration="28007000" />
+      <workItem from="1524466997096" duration="28164000" />
+      <workItem from="1524554865942" duration="22724000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96255000" />
+    <option name="totallyTimeSpent" value="119136000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -420,27 +530,27 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25340393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,17 +564,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/service/handlers/IntentHandler.java</url>
-          <line>73</line>
+          <line>82</line>
           <properties />
           <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="57" />
+      <option name="time" value="72" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/marvelDTO/CharacterResults.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/marvelModel/CharacterResults.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
@@ -487,7 +597,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/marvelDTO/MarvelCharacterResponse.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/marvelModel/MarvelCharacterResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
@@ -495,14 +605,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/marvelDTO/Character.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/marvelModel/Character.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/marvelDTO/MarvelComicsResponse.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/marvelModel/MarvelComicsResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
@@ -546,7 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="71" column="17" lean-forward="false" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -554,7 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-72">
           <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -577,40 +685,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/domain/HeroesRatingEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="e#642#643#0" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#701#702#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#914#915#0" expanded="true" />
-            <element signature="e#943#944#0" expanded="true" />
-            <element signature="e#985#986#0" expanded="true" />
-            <element signature="e#1021#1022#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/actionInterceptors/TextHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/actionInterceptors/TextHandler.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/GeneratedValue.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -622,7 +704,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/marvelDTO/ComicsResults.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/marvelModel/ComicsResults.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1257">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
@@ -635,39 +717,39 @@
         <state relative-caret-position="171">
           <caret line="31" column="60" lean-forward="true" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1381#1382#0" expanded="true" />
-            <element signature="e#1404#1405#0" expanded="true" />
-            <element signature="e#1441#1442#0" expanded="true" />
-            <element signature="e#1473#1474#0" expanded="true" />
-            <element signature="e#1525#1526#0" expanded="true" />
-            <element signature="e#1556#1557#0" expanded="true" />
-            <element signature="e#1608#1609#0" expanded="true" />
-            <element signature="e#1638#1639#0" expanded="true" />
-            <element signature="e#1669#1670#0" expanded="true" />
-            <element signature="e#1698#1699#0" expanded="true" />
-            <element signature="e#1730#1731#0" expanded="true" />
-            <element signature="e#1758#1759#0" expanded="true" />
-            <element signature="e#1800#1801#0" expanded="true" />
-            <element signature="e#1834#1835#0" expanded="true" />
-            <element signature="e#1884#1885#0" expanded="true" />
-            <element signature="e#1926#1927#0" expanded="true" />
-            <element signature="e#1991#1992#0" expanded="true" />
-            <element signature="e#2031#2032#0" expanded="true" />
-            <element signature="e#2095#2096#0" expanded="true" />
-            <element signature="e#2133#2134#0" expanded="true" />
-            <element signature="e#2181#2182#0" expanded="true" />
-            <element signature="e#2221#2222#0" expanded="true" />
-            <element signature="e#2256#2257#0" expanded="true" />
-            <element signature="e#2287#2288#0" expanded="true" />
-            <element signature="e#2314#2315#0" expanded="true" />
-            <element signature="e#2339#2340#0" expanded="true" />
-            <element signature="e#2373#2374#0" expanded="true" />
-            <element signature="e#2401#2402#0" expanded="true" />
-            <element signature="e#2450#2451#0" expanded="true" />
-            <element signature="e#2479#2480#0" expanded="true" />
-            <element signature="e#2539#2540#0" expanded="true" />
-            <element signature="e#2575#2576#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1381#1382#0" expanded="false" />
+            <element signature="e#1404#1405#0" expanded="false" />
+            <element signature="e#1441#1442#0" expanded="false" />
+            <element signature="e#1473#1474#0" expanded="false" />
+            <element signature="e#1525#1526#0" expanded="false" />
+            <element signature="e#1556#1557#0" expanded="false" />
+            <element signature="e#1608#1609#0" expanded="false" />
+            <element signature="e#1638#1639#0" expanded="false" />
+            <element signature="e#1669#1670#0" expanded="false" />
+            <element signature="e#1698#1699#0" expanded="false" />
+            <element signature="e#1730#1731#0" expanded="false" />
+            <element signature="e#1758#1759#0" expanded="false" />
+            <element signature="e#1800#1801#0" expanded="false" />
+            <element signature="e#1834#1835#0" expanded="false" />
+            <element signature="e#1884#1885#0" expanded="false" />
+            <element signature="e#1926#1927#0" expanded="false" />
+            <element signature="e#1991#1992#0" expanded="false" />
+            <element signature="e#2031#2032#0" expanded="false" />
+            <element signature="e#2095#2096#0" expanded="false" />
+            <element signature="e#2133#2134#0" expanded="false" />
+            <element signature="e#2181#2182#0" expanded="false" />
+            <element signature="e#2221#2222#0" expanded="false" />
+            <element signature="e#2256#2257#0" expanded="false" />
+            <element signature="e#2287#2288#0" expanded="false" />
+            <element signature="e#2314#2315#0" expanded="false" />
+            <element signature="e#2339#2340#0" expanded="false" />
+            <element signature="e#2373#2374#0" expanded="false" />
+            <element signature="e#2401#2402#0" expanded="false" />
+            <element signature="e#2450#2451#0" expanded="false" />
+            <element signature="e#2479#2480#0" expanded="false" />
+            <element signature="e#2539#2540#0" expanded="false" />
+            <element signature="e#2575#2576#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -677,98 +759,11 @@
         <state relative-caret-position="205">
           <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
           <folding>
-            <element signature="e#1176#1177#0" expanded="true" />
-            <element signature="e#1205#1206#0" expanded="true" />
-            <element signature="e#1247#1248#0" expanded="true" />
-            <element signature="e#1283#1284#0" expanded="true" />
+            <element signature="e#1176#1177#0" expanded="false" />
+            <element signature="e#1205#1206#0" expanded="false" />
+            <element signature="e#1247#1248#0" expanded="false" />
+            <element signature="e#1283#1284#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/domain/UserComicsEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" column="28" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="25" selection-end-column="28" />
-          <folding>
-            <element signature="e#857#858#0" expanded="true" />
-            <element signature="e#882#883#0" expanded="true" />
-            <element signature="e#917#918#0" expanded="true" />
-            <element signature="e#944#945#0" expanded="true" />
-            <element signature="e#977#978#0" expanded="true" />
-            <element signature="e#1008#1009#0" expanded="true" />
-            <element signature="e#1048#1049#0" expanded="true" />
-            <element signature="e#1084#1085#0" expanded="true" />
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1154#1155#0" expanded="true" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1220#1221#0" expanded="true" />
-            <element signature="e#1254#1255#0" expanded="true" />
-            <element signature="e#1282#1283#0" expanded="true" />
-            <element signature="e#1326#1327#0" expanded="true" />
-            <element signature="e#1358#1359#0" expanded="true" />
-            <element signature="e#1404#1405#0" expanded="true" />
-            <element signature="e#1444#1445#0" expanded="true" />
-            <element signature="e#1502#1503#0" expanded="true" />
-            <element signature="e#1552#1553#0" expanded="true" />
-            <element signature="e#1604#1605#0" expanded="true" />
-            <element signature="e#1648#1649#0" expanded="true" />
-            <element signature="e#1696#1697#0" expanded="true" />
-            <element signature="e#1736#1737#0" expanded="true" />
-            <element signature="e#1767#1768#0" expanded="true" />
-            <element signature="e#1796#1797#0" expanded="true" />
-            <element signature="e#1838#1839#0" expanded="true" />
-            <element signature="e#1874#1875#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/UserRequestRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/UserComicsRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1524490042303" expanded="true" signature="665:703" ph="delete FROM user_comics... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/HeroesRatingRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1524228808123" expanded="true" signature="517:673" ph="select heroe... heroes_rating" />
-            <marker date="1524228808123" expanded="true" signature="769:865" ph="SELECT count... heroes_rating" />
-            <marker date="1524228808123" expanded="true" signature="978:1076" ph="SELECT count... heroes_rating" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ChatUserImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -780,36 +775,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/domain/ComicsRequestEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="49" column="5" lean-forward="false" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-          <folding>
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#626#627#0" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
-            <element signature="e#714#715#0" expanded="true" />
-            <element signature="e#745#746#0" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
-            <element signature="e#817#818#0" expanded="true" />
-            <element signature="e#859#860#0" expanded="true" />
-            <element signature="e#895#896#0" expanded="true" />
-            <element signature="e#929#930#0" expanded="true" />
-            <element signature="e#957#958#0" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
-            <element signature="e#1045#1046#0" expanded="true" />
-            <element signature="e#1099#1100#0" expanded="true" />
-            <element signature="e#1145#1146#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/botscrew/nlp-client-spring-boot-starter/1.0.0/nlp-client-spring-boot-starter-1.0.0.jar!/com/botscrew/nlpclient/provider/BotFrameworkNlpClient.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -817,9 +786,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="e#881#882#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -827,10 +793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding>
-            <element signature="e#1998#1999#0" expanded="true" />
-            <element signature="e#2071#2072#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -838,7 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
           <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -846,9 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="e#1937#1938#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -856,9 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding>
-            <element signature="e#2171#2172#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -866,7 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -874,15 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#821#822#0" expanded="true" />
-            <element signature="e#944#945#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
-            <element signature="e#1257#1258#0" expanded="true" />
-            <element signature="e#1294#1295#0" expanded="true" />
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1386#1387#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -890,9 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#302#303#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -900,114 +842,208 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="344" column="0" lean-forward="false" selection-start-line="344" selection-start-column="0" selection-end-line="344" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ChatUserImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/handlers/IntentHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/domain/UserComicsEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-328">
-          <caret line="84" column="63" lean-forward="false" selection-start-line="84" selection-start-column="63" selection-end-line="84" selection-end-column="63" />
+        <state relative-caret-position="204">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/domain/HeroesRatingEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="50" column="11" lean-forward="true" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
           <folding>
-            <element signature="method#handleChooseHero#0;class#IntentHandler#0" expanded="false" />
-            <element signature="method#handleSpecialCase#0;class#IntentHandler#0" expanded="false" />
-            <element signature="method#handleHelp#0;class#IntentHandler#0" expanded="false" />
-            <element signature="method#handleThankYou#0;class#IntentHandler#0" expanded="false" />
-            <element signature="method#handleTop#0;class#IntentHandler#0" expanded="false" />
-            <element signature="method#handleDC#0;class#IntentHandler#0" expanded="false" />
-            <element signature="method#handleComicsTextRequest#0;class#IntentHandler#0" expanded="false" />
-            <element signature="method#handleComicsTextRequestSC#0;class#IntentHandler#0" expanded="false" />
-            <element signature="method#getComicsThroughText#0;class#IntentHandler#0" expanded="false" />
+            <element signature="e#642#643#0" expanded="false" />
+            <element signature="e#667#668#0" expanded="false" />
+            <element signature="e#701#702#0" expanded="false" />
+            <element signature="e#729#730#0" expanded="false" />
+            <element signature="e#914#915#0" expanded="false" />
+            <element signature="e#943#944#0" expanded="false" />
+            <element signature="e#985#986#0" expanded="false" />
+            <element signature="e#1021#1022#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Replies.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/domain/ComicsRequestEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="81" lean-forward="false" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
+        <state relative-caret-position="128">
+          <caret line="27" column="104" lean-forward="false" selection-start-line="27" selection-start-column="104" selection-end-line="27" selection-end-column="104" />
+          <folding>
+            <element signature="e#1354#1355#0" expanded="false" />
+            <element signature="e#1400#1401#0" expanded="false" />
+            <element signature="e#1438#1439#0" expanded="false" />
+            <element signature="e#1472#1473#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/UserService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/UserRequestRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        <state relative-caret-position="85">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/ComicsRequestRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="119">
           <caret line="11" column="62" lean-forward="false" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/UserComicsRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1524490042303" expanded="true" signature="665:703" ph="delete FROM user_comics... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/TemplateBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/HeroesRatingRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="45" column="19" lean-forward="false" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+        <state relative-caret-position="102">
+          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding>
-            <element signature="method#createGenericTemplateForUserComics#0;class#TemplateBuilder#0" expanded="false" />
-            <element signature="method#checkIfSubscribed#0;class#TemplateBuilder#0" expanded="false" />
-            <element signature="method#createRatingQuickReply#0;class#TemplateBuilder#0" expanded="false" />
-            <element signature="method#buildElementForComics#0;class#TemplateBuilder#0" expanded="false" />
-            <element signature="method#buildGenericTemplateForComics#0;class#TemplateBuilder#0" expanded="false" />
-            <element signature="method#buildElementForUserComics#0;class#TemplateBuilder#0" expanded="false" />
-            <element signature="method#buildGenericTemplateForUserComics#0;class#TemplateBuilder#0" expanded="false" />
-            <element signature="method#addCharacterTemplate#0;class#TemplateBuilder#0" expanded="false" />
-            <element signature="method#iterateThroughCharacters#0;class#TemplateBuilder#0" expanded="false" />
-            <element signature="method#iterateThroughComics#0;class#TemplateBuilder#0" expanded="false" />
-            <element signature="method#iterateThroughUserComics#0;class#TemplateBuilder#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ApiCaller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="80" column="48" lean-forward="false" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="48" />
-          <folding>
-            <element signature="method#callMarvelForCharacter#0;class#ApiCaller#0" expanded="false" />
-            <element signature="method#callMarvelForComics#0;class#ApiCaller#0" expanded="false" />
-            <element signature="method#createHash#0;class#ApiCaller#0" expanded="false" />
+            <marker date="1524567183745" expanded="true" signature="517:652" ph="select heroe... heroes_rating" />
+            <marker date="1524567183745" expanded="true" signature="748:837" ph="SELECT count... heroes_rating" />
+            <marker date="1524567183745" expanded="true" signature="950:1041" ph="SELECT count... heroes_rating" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="125" lean-forward="true" selection-start-line="17" selection-start-column="125" selection-end-line="17" selection-end-column="125" />
+        <state relative-caret-position="180">
+          <caret line="17" column="144" lean-forward="false" selection-start-line="17" selection-start-column="144" selection-end-line="17" selection-end-column="144" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/ApiCaller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="91" column="35" lean-forward="false" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
+          <folding>
+            <element signature="method#callMarvelForCharacter#0;class#ApiCaller#0" expanded="false" />
+            <element signature="method#callMarvelForCharacterWithFullName#0;class#ApiCaller#0" expanded="false" />
+            <element signature="method#createHash#0;class#ApiCaller#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Replies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="73" column="56" lean-forward="false" selection-start-line="73" selection-start-column="56" selection-end-line="73" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="87" column="103" lean-forward="false" selection-start-line="87" selection-start-column="103" selection-end-line="87" selection-end-column="103" />
+          <folding>
+            <element signature="method#getByChatIdAndPageId#0;class#UserService#0" expanded="false" />
+            <element signature="method#sendRequestForRecentComicsCall#0;class#UserService#0" expanded="false" />
+            <element signature="method#setUserState#0;class#UserService#0" expanded="false" />
+            <element signature="method#handleMarvelNotEmptyResponse#0;class#UserService#0" expanded="false" />
+            <element signature="e#3482#3707#0" expanded="false" />
+            <element signature="method#saveRequestToDatabase#0;class#UserService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/handlers/IntentHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+          <folding>
+            <element signature="method#handleChooseHero#0;class#IntentHandler#0" expanded="false" />
+            <element signature="method#handleSpecialCase#0;class#IntentHandler#0" expanded="false" />
+            <element signature="method#handleChooseHeroWithRecentComicsState#0;class#IntentHandler#0" expanded="false" />
+            <element signature="method#handleSpecialCaseWithRecentComicsState#0;class#IntentHandler#0" expanded="false" />
+            <element signature="method#handleHelp#0;class#IntentHandler#0" expanded="false" />
+            <element signature="method#handleThankYou#0;class#IntentHandler#0" expanded="false" />
+            <element signature="method#handleTop#0;class#IntentHandler#0" expanded="false" />
+            <element signature="method#handleComicsTextRequest#0;class#IntentHandler#0" expanded="false" />
+            <element signature="method#handleComicsTextRequestSC#0;class#IntentHandler#0" expanded="false" />
+            <element signature="method#handleComicsTextRequest#1;class#IntentHandler#0" expanded="false" />
+            <element signature="method#getComicsThroughText#0;class#IntentHandler#0" expanded="false" />
+            <element signature="method#marvelCharacterResponseSender#0;class#IntentHandler#0" expanded="false" />
+            <element signature="method#sendRecentComicsRequestReply#0;class#IntentHandler#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/service/handlers/ChatHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="93" column="18" lean-forward="true" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
+        <state relative-caret-position="242">
+          <caret line="242" column="59" lean-forward="true" selection-start-line="242" selection-start-column="59" selection-end-line="242" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#handleComicsTextRequest#0;class#ChatHandler#0" expanded="false" />
-            <element signature="e#4544#4545#0" expanded="true" />
-            <element signature="e#4607#4608#0" expanded="true" />
+            <element signature="method#handleRecentComicsRequest#0;class#ChatHandler#0" expanded="false" />
             <element signature="method#handleComicsPostback#0;class#ChatHandler#0" expanded="false" />
             <element signature="method#handleRatingPostback#0;class#ChatHandler#0" expanded="false" />
             <element signature="method#handleRating#0;class#ChatHandler#0" expanded="false" />
+            <element signature="method#handleHeroQuickReply#0;class#ChatHandler#0" expanded="false" />
             <element signature="method#handleStart#0;class#ChatHandler#0" expanded="false" />
             <element signature="method#handleSubscriptionToComics#0;class#ChatHandler#0" expanded="false" />
             <element signature="method#handleUnsubscribeToComics#0;class#ChatHandler#0" expanded="false" />
+            <element signature="method#handleRecentComics#0;class#ChatHandler#0" expanded="false" />
+            <element signature="method#handleMoreComicsPostback#0;class#ChatHandler#0" expanded="false" />
             <element signature="method#onAction#0;class#ChatHandler#0" expanded="false" />
             <element signature="method#rateHero#0;class#ChatHandler#0" expanded="false" />
             <element signature="method#checkIfSubscribed#0;class#ChatHandler#0" expanded="false" />
             <element signature="method#getComicsThroughText#0;class#ChatHandler#0" expanded="false" />
             <element signature="method#setUserState#0;class#ChatHandler#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/TemplateBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="88" column="89" lean-forward="false" selection-start-line="88" selection-start-column="89" selection-end-line="88" selection-end-column="89" />
+          <folding>
+            <element signature="method#createGenericTemplateForCharacter#0;class#TemplateBuilder#0" expanded="false" />
+            <element signature="method#checkIfSubscribed#0;class#TemplateBuilder#0" expanded="false" />
+            <element signature="method#createRatingQuickReply#0;class#TemplateBuilder#0" expanded="false" />
+            <element signature="method#buildGenericTemplateForComics#0;class#TemplateBuilder#0" expanded="false" />
+            <element signature="method#buildGenericTemplateForUserComics#0;class#TemplateBuilder#0" expanded="false" />
+            <element signature="method#iterateThroughCharacters#0;class#TemplateBuilder#0" expanded="false" />
+            <element signature="method#iterateThroughComics#0;class#TemplateBuilder#0" expanded="false" />
+            <element signature="method#iterateThroughUserComics#0;class#TemplateBuilder#0" expanded="false" />
+            <element signature="method#buildTopHeroesQuickReply#0;class#TemplateBuilder#0" expanded="false" />
+            <element signature="method#checkTopHeroesSize#0;class#TemplateBuilder#0" expanded="false" />
+            <element signature="method#getStandartTopHeroes#0;class#TemplateBuilder#0" expanded="false" />
           </folding>
         </state>
       </provider>

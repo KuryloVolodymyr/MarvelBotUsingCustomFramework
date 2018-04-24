@@ -1,25 +1,19 @@
 package com.service.handlers;
 
-import ai.api.model.AIResponse;
-import com.ApiCaller;
+import com.service.ApiCaller;
 import com.ChatUserImpl;
 import com.Replies;
 import com.botscrew.botframework.annotation.*;
 import com.domain.ComicsRequestEntity;
-import com.domain.UserComicsEntity;
-import com.domain.UserEntity;
-import com.marvelDTO.CharacterResults;
-import com.marvelDTO.MarvelCharacterResponse;
-import com.marvelDTO.MarvelComicsResponse;
+import com.marvelModel.MarvelCharacterResponse;
 import com.repository.ComicsRequestRepository;
 import com.repository.UserRepository;
 import com.service.UserService;
-import com.TemplateBuilder;
+import com.service.TemplateBuilder;
 import com.botscrew.messengercdk.service.Sender;
 import com.botscrew.messengercdk.model.outgoing.request.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @IntentProcessor
@@ -40,6 +34,9 @@ public class IntentHandler implements Replies {
     @Autowired
     private ComicsRequestRepository comicsRequestRepository;
 
+    @Autowired
+    private UserService userService;
+
 
     @Intent
     public void handleIntent(ChatUserImpl chatUser) {
@@ -54,6 +51,18 @@ public class IntentHandler implements Replies {
     @Intent(marvelSpecialHeroesIntent)
     public void handleSpecialCase(ChatUserImpl chatUser, @Param("heroName") String heroName) {
         marvelCharacterResponseSender(chatUser, heroName);
+    }
+
+    @Intent(states = {userStateRecentComics}, value = chooseHeroIntent)
+    public void handleChooseHeroWithRecentComicsState(ChatUserImpl chatUser, @Param("heroName") String heroName) {
+        sendRecentComicsRequestReply(chatUser, heroName);
+        userService.setUserState(chatUser, userStateDefault);
+    }
+
+    @Intent(states = {userStateRecentComics}, value = marvelSpecialHeroesIntent)
+    public void handleSpecialCaseWithRecentComicsState(ChatUserImpl chatUser, @Param("heroName") String heroName) {
+        sendRecentComicsRequestReply(chatUser, heroName);
+        userService.setUserState(chatUser, userStateDefault);
     }
 
     @Intent(helpIntent)
@@ -71,8 +80,8 @@ public class IntentHandler implements Replies {
 
     @Intent(topIntent)
     public void handleTop(ChatUserImpl chatUser) {
-        //todo
-        sender.send(chatUser, topIntentReply);
+        Request request = templateBuilder.buildTopHeroesQuickReply(chatUser);
+        sender.send(request);
     }
 
     @Intent(dcIntent)
@@ -83,39 +92,26 @@ public class IntentHandler implements Replies {
 
     @Intent(comicsIntent)
     public void handleComicsTextRequest(ChatUserImpl chatUser) {
-        setUserState(chatUser, userStateComics);
+        userService.setUserState(chatUser, userStateComics);
         sender.send(chatUser, askUserForComics);
     }
 
     @Intent(states = {userStateComics}, value = marvelSpecialHeroesIntent)
     public void handleComicsTextRequestSC(ChatUserImpl chatUser, @Param("heroName") String heroName) {
-        setUserState(chatUser, userStateComics);
+        userService.setUserState(chatUser, userStateComics);
         getComicsThroughText(chatUser, heroName);
     }
 
     @Intent(states = {userStateComics}, value = chooseHeroIntent)
     public void handleComicsTextRequest(ChatUserImpl chatUser, @Param("heroName") String heroName) {
         getComicsThroughText(chatUser, heroName);
-        setUserState(chatUser, userStateDefault);
+        userService.setUserState(chatUser, userStateDefault);
     }
 
     private void getComicsThroughText(ChatUserImpl chatUser, String heroName) {
         MarvelCharacterResponse character = apiCaller.callMarvelForCharacter(heroName);
         if (!character.getData().getResults().isEmpty()) {
-            List<CharacterResults> results = character.getData().getResults();
-
-            results.forEach((result) -> {
-                String characterName = result.getName();
-                String lastRequest = LocalDate.now().toString();
-                comicsRequestRepository.save(new ComicsRequestEntity(chatUser.getChatId(), characterName, lastRequest));
-            });
-
-            String characterId = character.getData().getResults().get(0).getId().toString();
-            MarvelComicsResponse comics = apiCaller.callMarvelForComics(characterId);
-            List<UserComicsEntity> comicsEntities = userRepository.getByChatID(chatUser.getChatId()).getComics();
-            Request request = templateBuilder.createGenericTemplateForComics(chatUser, comics, comicsEntities);
-
-            sender.send(request);
+            userService.handleMarvelNotEmptyResponse(chatUser, character);
         } else {
             sender.send(chatUser, cantFindCharacterReply);
         }
@@ -134,11 +130,19 @@ public class IntentHandler implements Replies {
         }
     }
 
-    private void setUserState(ChatUserImpl chatUser, String state) {
-        UserEntity user = userRepository.getByChatID(chatUser.getChatId());
-        user.setState(state);
-        userRepository.save(user);
+
+    private void sendRecentComicsRequestReply(ChatUserImpl chatUser, String characterName) {
+        List<ComicsRequestEntity> comicsRequests = comicsRequestRepository.getByChatId(chatUser.getChatId());
+        comicsRequests.removeIf((comicsRequest) -> !comicsRequest.getCharacterName().toLowerCase().equals(characterName));
+        if (!comicsRequests.isEmpty()) {
+            Request request = userService.sendRequestForRecentComicsCall(chatUser, comicsRequests);
+            sender.send(request);
+        } else {
+            sender.send(chatUser, haventSearchPreviouslyReply);
+        }
     }
 
 
 }
+
+

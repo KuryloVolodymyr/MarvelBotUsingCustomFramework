@@ -2,6 +2,7 @@ package com;
 
 public interface Replies {
     public static Integer comicsAtOnce = 5;
+    public static Integer topHeroesNumber = 10;
 
     public static String defaultIntentReply = "Sorry, I didn't understand you";
     public static String greetingReply = ", I`m Marvel bot, I can help you find info about Marvel characters. \nType in something like \"Who is Hulk?\"";
@@ -14,16 +15,22 @@ public interface Replies {
     public static String dcReply = "NO DC";
 
     public static String recentComicsReply = "What character would you like to see recent comics about";
+    public static String noRecentComicsReply = "Sorry, there seems to be no recent comics about ";
+    public static String notSubscribedToComicsReply = "You are not subscribe to any comics right now";
+    public static String haventSearchPreviouslyReply = "It seems you haven`t looked for comics with this character previously";
 
     public static String ratingPostbackValue = "rating";
     public static String ratingPostbackReply = " is rated, let`s do something else now";
 
+    public static String negativeOffsetReply = "This are the newest comics, nothing to go back to";
+
+    public static String characterQuickReply = "characterQuickReply";
+
     public static String ratePostbackValue = "rate";
 
     public static String like = "like";
-    public static String dislike = "dislike";
-
     public static String likeTitle = "Like";
+    public static String dislike = "dislike";
     public static String dislikeTitle = "Dislike";
 
     public static String getStartetButtonPostbackValue = "GET_STARTED";
@@ -58,6 +65,13 @@ public interface Replies {
     public static String chooseHeroIntent = "chooseHeroIntent";
     public static String marvelSpecialHeroesIntent = "marvelSpecialCase";
     public static String comicsIntent = "comics";
+
+    public static String moreComics = "More comics";
+    public static String moreComicsValue = "moreComics";
+    public static String comicsBack = "Back";
+
+
+    public static String moreUserComicsValue = "moreUserComics";
 
 
 

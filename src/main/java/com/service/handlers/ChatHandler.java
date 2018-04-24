@@ -1,23 +1,27 @@
 package com.service.handlers;
 
-import com.ApiCaller;
+import com.botscrew.botframework.container.TextContainer;
+import com.botscrew.botframework.domain.argument.ArgumentType;
+import com.botscrew.botframework.domain.argument.kit.ArgumentKit;
+import com.botscrew.botframework.domain.argument.kit.SimpleArgumentKit;
+import com.botscrew.botframework.domain.argument.wrapper.SimpleArgumentWrapper;
+import com.botscrew.messengercdk.model.outgoing.profile.menu.PersistentMenu;
+import com.botscrew.messengercdk.model.outgoing.profile.menu.PostbackMenuItem;
+import com.service.ApiCaller;
 import com.ChatUserImpl;
 import com.Replies;
 import com.botscrew.messengercdk.domain.MessengerInterceptor;
 import com.botscrew.messengercdk.domain.action.GetEvent;
 import com.botscrew.messengercdk.model.incomming.Profile;
 import com.botscrew.messengercdk.model.outgoing.builder.SenderAction;
-import com.botscrew.messengercdk.model.outgoing.profile.menu.PersistentMenu;
-import com.botscrew.messengercdk.model.outgoing.profile.menu.PostbackMenuItem;
 import com.botscrew.messengercdk.service.Messenger;
 import com.domain.ComicsRequestEntity;
 import com.domain.HeroesRatingEntity;
 import com.domain.UserComicsEntity;
 import com.domain.UserEntity;
-import com.marvelDTO.CharacterResults;
-import com.marvelDTO.MarvelCharacterResponse;
-import com.marvelDTO.MarvelComicsResponse;
-import com.TemplateBuilder;
+import com.marvelModel.MarvelCharacterResponse;
+import com.marvelModel.MarvelComicsResponse;
+import com.service.TemplateBuilder;
 import com.botscrew.botframework.annotation.ChatEventsProcessor;
 import com.botscrew.botframework.annotation.Param;
 import com.botscrew.botframework.annotation.Postback;
@@ -29,11 +33,10 @@ import com.repository.ComicsRequestRepository;
 import com.repository.HeroesRatingRepository;
 import com.repository.UserComicsRepository;
 import com.repository.UserRepository;
+import com.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.client.HttpClientErrorException;
 
 import javax.annotation.PostConstruct;
-import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
@@ -67,10 +70,23 @@ public class ChatHandler implements MessengerInterceptor<GetEvent>, Replies {
     @Autowired
     private ComicsRequestRepository comicsRequestRepository;
 
+    @Autowired
+    private TextContainer container;
+
+    @Autowired
+    private UserService userService;
+
     @Text
     //Method handles all text request from user with default state
     public void handleTextDefault(ChatUserImpl chatUserImpl, @Text String text) {
-        nlpClient.query(chatUserImpl, text);
+        System.out.println(text);
+        MarvelCharacterResponse marvelCharacterResponse = apiCaller.callMarvelForCharacterWithFullName(text);
+        if (!marvelCharacterResponse.getData().getResults().isEmpty()) {
+            Request request = templateBuilder.createGenericTemplateForCharacter(chatUserImpl, marvelCharacterResponse);
+            sender.send(request);
+        } else {
+            nlpClient.query(chatUserImpl, text);
+        }
     }
 
     @Text(states = {userStateComics})
@@ -78,34 +94,14 @@ public class ChatHandler implements MessengerInterceptor<GetEvent>, Replies {
     public void handleComicsTextRequest(ChatUserImpl chatUser, @Text String text) {
         getComicsThroughText(chatUser, text);
         setUserState(chatUser, userStateDefault);
-
     }
 
     @Text(states = {userStateRecentComics})
     public void handleRecentComicsRequest(ChatUserImpl chatUser, @Text String text) {
         List<ComicsRequestEntity> comicsRequests = comicsRequestRepository.getByChatId(chatUser.getChatId());
-        comicsRequests.removeIf((comicsRequest) -> !comicsRequest.getHeroName().toLowerCase().equals(text));
+        comicsRequests.removeIf((comicsRequest) -> !comicsRequest.getCharacterName().toLowerCase().equals(text));
         if (!comicsRequests.isEmpty()) {
-            //todo
-            //rewrite comicsRequestEntity to save characterId
-            UserEntity user = userRepository.getByChatID(chatUser.getChatId());
-            comicsRequests.forEach((request) -> System.out.println(request.getHeroName() + " " + request.getLastRequest()));
-            MarvelCharacterResponse character = apiCaller.callMarvelForCharacter(comicsRequests.get(0).getHeroName());
-            //todo
-            //throws exception
-            try {
-                MarvelComicsResponse recentComics = apiCaller.callMarvelApiForRecentComics(character.getData().getResults().get(0).getId().toString(),
-                        comicsRequests.get(0).getLastRequest());
-                if (recentComics.getData().getResults().isEmpty()) {
-                    sender.send(chatUser, "There are no recent comics");
-                } else {
-                    Request request = templateBuilder.createGenericTemplateForComics(chatUser, recentComics, user.getComics());
-                    sender.send(request);
-                }
-            } catch (HttpClientErrorException e) {
-                System.out.println(e.getResponseBodyAsString());
-            }
-
+            Request request = userService.sendRequestForRecentComicsCall(chatUser, comicsRequests);
         } else {
             nlpClient.query(chatUser, text);
         }
@@ -120,21 +116,23 @@ public class ChatHandler implements MessengerInterceptor<GetEvent>, Replies {
     @Postback(value = comicsPostbackValue)
     //method handles postback with comics payload
     public void handleComicsPostback(ChatUserImpl chatUserImpl, @Param("characterId") String characterId,
-                                     @Param("characterName") String characterName) {
-        MarvelComicsResponse marvelComicsResponse = apiCaller.callMarvelForComics(characterId);
+                                     @Param("characterName") String characterName, @Param("offset") Long offset) {
+        MarvelComicsResponse marvelComicsResponse = apiCaller.callMarvelForComics(characterId, offset);
 
         if (!marvelComicsResponse.getData().getResults().isEmpty()) {
 
-            String lastRequest = LocalDate.now().toString();
-            comicsRequestRepository.save(new ComicsRequestEntity(chatUserImpl.getChatId(), characterName, lastRequest));
+            List<ComicsRequestEntity> comicsRequestEntities = comicsRequestRepository.getByChatId(chatUserImpl.getChatId());
 
+            userService.saveRequestToDatabase(chatUserImpl, comicsRequestEntities, characterName, characterId);
             List<UserComicsEntity> comicsEntities = userRepository.getByChatID(chatUserImpl.getChatId()).getComics();
-            Request request = templateBuilder.createGenericTemplateForComics(chatUserImpl, marvelComicsResponse, comicsEntities);
+            Request request = templateBuilder.createGenericTemplateForComics(chatUserImpl, marvelComicsResponse,
+                    comicsEntities, characterId, offset);
             sender.send(request);
 
         } else {
             sender.send(chatUserImpl, emptyResultsReply);
         }
+
     }
 
     @Postback(value = ratePostbackValue)
@@ -153,6 +151,14 @@ public class ChatHandler implements MessengerInterceptor<GetEvent>, Replies {
         sender.send(chatUser, heroName + ratingPostbackReply);
     }
 
+    @Postback(value = characterQuickReply)
+    public void handleHeroQuickReply(ChatUserImpl chatUser, @Param("characterName") String characterName) {
+
+        MarvelCharacterResponse characterResponse = apiCaller.callMarvelForCharacter(characterName);
+        Request request = templateBuilder.createGenericTemplateForCharacter(chatUser, characterResponse);
+        sender.send(request);
+    }
+
     @Postback(value = getStartetButtonPostbackValue)
     //method start of the conversation by getStarted button, and if user is not saved in database yet saves him
     public void handleStart(ChatUserImpl chatUser) {
@@ -169,25 +175,20 @@ public class ChatHandler implements MessengerInterceptor<GetEvent>, Replies {
     public void handleSubscriptionToComics(ChatUserImpl chatUser, @Param("id") Long comicsId, @Param("comicsInfo") String comicsInfo,
                                            @Param("comicsTitle") String comicsName, @Param("imageUrl") String imageUrl) {
         List<UserComicsEntity> comics = userRepository.getByChatID(chatUser.getChatId()).getComics();
-
-
         if (!checkIfSubscribed(comics, comicsId)) {
             UserComicsEntity comicsToSave = new UserComicsEntity(comicsId, comicsName, comicsInfo, imageUrl, chatUser.getChatId());
             comicsToSave.setUser(userRepository.findByChatID(chatUser.getChatId()));
             userComicsRepository.save(comicsToSave);
-
             sender.send(chatUser, subscribeReplySuccessfull);
         } else {
-
             sender.send(chatUser, subscribeReplyUnsuccessfull);
-
         }
     }
 
     @Postback(value = unsubscribePostbackValue)
     //handles unsubscription from comics
     //gets list of all comics user is subscribed to
-    //if Id to unsibscribe matches id of subscribed comics delete it
+    //if Id to unsubscribe matches id of subscribed comics delete it
     public void handleUnsubscribeToComics(ChatUserImpl chatUser, @Param("id") Long comicsId) {
         UserEntity user = userRepository.getByChatID(chatUser.getChatId());
         List<UserComicsEntity> comicsEntities = user.getComics();
@@ -207,9 +208,9 @@ public class ChatHandler implements MessengerInterceptor<GetEvent>, Replies {
     public void handleGetSubscribedComics(ChatUserImpl chatUser) {
         UserEntity user = userRepository.getByChatID(chatUser.getChatId());
         if (user.getComics().isEmpty()) {
-            sender.send(chatUser, "you are not subscribe to any comics right now");
+            sender.send(chatUser, notSubscribedToComicsReply);
         } else {
-            Request request = templateBuilder.createGenericTemplateForUserComics(chatUser);
+            Request request = templateBuilder.createGenericTemplateForUserComics(chatUser, 0);
             sender.send(request);
         }
     }
@@ -218,32 +219,61 @@ public class ChatHandler implements MessengerInterceptor<GetEvent>, Replies {
     public void handleRecentComics(ChatUserImpl chatUser) {
         setUserState(chatUser, userStateRecentComics);
         sender.send(chatUser, recentComicsReply);
-        System.out.println("Handling recent comics");
     }
 
+    @Postback(value = moreComicsValue)
+    public void handleMoreComicsPostback(ChatUserImpl chatUser, @Param("characterId") String characterId, @Param("offset") Long offset) {
+        if (!(offset < 0L)) {
+            MarvelComicsResponse comics = apiCaller.callMarvelForComics(characterId, offset);
+            List<UserComicsEntity> userComics = userRepository.getByChatID(chatUser.getChatId()).getComics();
+            Request request = templateBuilder.createGenericTemplateForComics(chatUser, comics, userComics, characterId, offset);
+            sender.send(request);
+        } else {
+            sender.send(chatUser, negativeOffsetReply);
+        }
+    }
+
+    @Postback(value = moreUserComicsValue)
+    public void handleMoreUserComicsPostback(ChatUserImpl chatUser, @Param("offset") Integer offset) {
+        UserEntity user = userRepository.getByChatID(chatUser.getChatId());
+        if (user.getComics().isEmpty()) {
+            sender.send(chatUser, notSubscribedToComicsReply);
+        } else {
+            if (offset < 0) {
+                sender.send(chatUser, negativeOffsetReply);
+            } else {
+                Request request = templateBuilder.createGenericTemplateForUserComics(chatUser, offset);
+                sender.send(request);
+            }
+        }
+    }
+
+
     @Override
-    //Send typing On when handling requests
+    //Send typingOn when handling requests
     public boolean onAction(GetEvent getEvent) {
         sender.send(SenderAction.typingOn(getEvent.getMessengerUser()));
         return true;
     }
 
-    @PostConstruct
-    public void initMessengerProfile() {
-        PersistentMenu menu = new PersistentMenu(
-                Arrays.asList(
-                        new PostbackMenuItem(getSubscribedComicsTitle, getSubscribedComicsValue),
-                        new PostbackMenuItem(getRecentComicsTitle, getRecentComicsValue)
-                )
-        );
-
-        messenger.setPersistentMenu(menu);
-    }
+//    @PostConstruct
+//    public void initMessengerProfile() {
+//        PersistentMenu menu = new PersistentMenu(
+//                Arrays.asList(
+//                        new PostbackMenuItem(getSubscribedComicsTitle, getSubscribedComicsValue),
+//                        new PostbackMenuItem(getRecentComicsTitle, getRecentComicsValue)
+//                )
+//        );
+//
+//        messenger.setPersistentMenu(menu);
+//    }
 
     private void rateHero(String rating, String heroName, ChatUserImpl chatUser) {
         Boolean rate = rating.equals(like);
         HeroesRatingEntity currentRating = heroesRatingRepository.getByHeroNameAndChatID(heroName, chatUser.getChatId());
 
+        //if there is no rating create a new one
+        //else rewrite the old one
         if (currentRating == null) {
             currentRating = new HeroesRatingEntity(heroName, chatUser.getChatId(), rate);
             currentRating.setUser(userRepository.findByChatID(chatUser.getChatId()));
@@ -270,25 +300,7 @@ public class ChatHandler implements MessengerInterceptor<GetEvent>, Replies {
         MarvelCharacterResponse character = apiCaller.callMarvelForCharacter(text);
 
         if (!character.getData().getResults().isEmpty()) {
-            List<CharacterResults> results = character.getData().getResults();
-
-            //checking every element in results array
-            //saving every character name and current date to database
-            results.forEach((result) -> {
-                String characterName = result.getName();
-                String lastRequest = LocalDate.now().toString();
-                comicsRequestRepository.save(new ComicsRequestEntity(chatUser.getChatId(), characterName, lastRequest));
-            });
-
-            //calling marvel Api for comics with character from request
-            String characterId = character.getData().getResults().get(0).getId().toString();
-            MarvelComicsResponse comics = apiCaller.callMarvelForComics(characterId);
-
-            //getting user comics to check if user subscribed
-            List<UserComicsEntity> comicsEntities = userRepository.getByChatID(chatUser.getChatId()).getComics();
-            Request request = templateBuilder.createGenericTemplateForComics(chatUser, comics, comicsEntities);
-
-            sender.send(request);
+            userService.handleMarvelNotEmptyResponse(chatUser, character);
         } else {
             nlpClient.query(chatUser, text);
         }

@@ -13,13 +13,13 @@ public interface HeroesRatingRepository extends JpaRepository<HeroesRatingEntity
 
     public HeroesRatingEntity getByHeroNameAndChatID(String heroName, Long chatId);
 
-    @Query(value = "select heroes_rating.hero_name from heroes_rating where rating = 1  group by (hero_name)" +
-            " order by count(heroes_rating.rating) desc limit 10", nativeQuery = true)
+    @Query(value = "select rating.hero_name from rating where rating = 1  group by (hero_name)" +
+            " order by count(rating.rating) desc limit 10", nativeQuery = true)
     public Set<String> getTopHeroesForQuickReply();
 
-    @Query(value = "SELECT count(rating) FROM internship.heroes_rating where hero_name = :heroName and rating = true", nativeQuery = true)
+    @Query(value = "SELECT count(rating) FROM internship.rating where hero_name = :heroName and rating = true", nativeQuery = true)
     public Long getLikesForHero(@Param("heroName") String heroName);
 
-    @Query(value = "SELECT count(rating) FROM internship.heroes_rating where hero_name = :heroName  and rating = false", nativeQuery = true)
+    @Query(value = "SELECT count(rating) FROM internship.rating where hero_name = :heroName  and rating = false", nativeQuery = true)
     public Long getDisLikesForHero(@Param("heroName") String heroName);
 }

@@ -4,20 +4,16 @@ import com.botscrew.botframework.domain.user.Bot;
 import com.botscrew.botframework.domain.user.ChatUser;
 import com.botscrew.messengercdk.model.MessengerUser;
 
-public class ChatUserImpl implements MessengerUser {
+public class ChatUserImpl implements MessengerUser, Replies {
 
     private String state;
 
     private Long chatId;
 
-    public ChatUserImpl(String state) {
-        this.state = state;
-    }
-
     public ChatUserImpl(Long chatId) {
         this.chatId = chatId;
         if (this.state == null) {
-            this.state = "default";
+            this.state = userStateDefault;
         }
     }
 

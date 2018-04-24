@@ -13,7 +13,10 @@ public class ComicsRequestEntity {
     private Long chatId;
 
     @Column
-    private String heroName;
+    private String characterName;
+
+    @Column
+    private String characterId;
 
     @Column
     private String lastRequest;
@@ -22,10 +25,11 @@ public class ComicsRequestEntity {
 
     }
 
-    public ComicsRequestEntity(Long chatId, String heroName, String lastRequest) {
+    public ComicsRequestEntity(Long chatId, String characterName, String characterId, String lastRequest) {
         this.chatId = chatId;
-        this.heroName = heroName;
+        this.characterName = characterName;
         this.lastRequest = lastRequest;
+        this.characterId = characterId;
     }
 
     public Long getChatId() {
@@ -37,8 +41,8 @@ public class ComicsRequestEntity {
         return id;
     }
 
-    public String getHeroName() {
-        return heroName;
+    public String getCharacterName() {
+        return characterName;
     }
 
     public String getLastRequest() {
@@ -53,11 +57,19 @@ public class ComicsRequestEntity {
         this.id = id;
     }
 
-    public void setHeroName(String heroName) {
-        this.heroName = heroName;
+    public void setCharacterName(String characterName) {
+        this.characterName = characterName;
     }
 
     public void setLastRequest(String lastRequest) {
         this.lastRequest = lastRequest;
+    }
+
+    public void setCharacterId(String characterId) {
+        this.characterId = characterId;
+    }
+
+    public String getCharacterId() {
+        return characterId;
     }
 }
